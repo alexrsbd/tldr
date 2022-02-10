@@ -12,8 +12,8 @@ on:
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
+    #runs-on: ubuntu-latest
+    runs-on: self-hosted
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -41,7 +41,7 @@ jobs:
         # Enable diagnostic mode
         env:
           DETECT_DIAGNOSTIC: true
-          #NODE_EXTRA_CA_CERTS: ~/my-cert.pem
+          NODE_EXTRA_CA_CERTS: externals/rootCA.pem
           #NODE_TLS_REJECT_UNAUTHORIZED: 0
         #  DETECT_DIAGNOSTIC_EXTENDED: true
         with:
