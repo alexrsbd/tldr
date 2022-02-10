@@ -34,7 +34,7 @@ jobs:
 
       # Run Synopsys Detect
       - name: Run Synopsys Detect
-        uses: synopsys-sig/detect-action@v0.2.0
+        uses: synopsys-sig/detect-action@main
         # This server does not require a local CA Cert
         #env:
         #  NODE_EXTRA_CA_CERTS: ${{ secrets.LOCAL_CA_CERT_PATH }}
