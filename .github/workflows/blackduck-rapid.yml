@@ -43,7 +43,7 @@ jobs:
         env:
           DETECT_DIAGNOSTIC: true
           NODE_EXTRA_CA_CERTS: /home/alexrs/my-ca-cert.pem 
-          #NODE_TLS_REJECT_UNAUTHORIZED: 0
+          NODE_TLS_REJECT_UNAUTHORIZED: 0
         #  DETECT_DIAGNOSTIC_EXTENDED: true
         with:
             scan-mode: RAPID
