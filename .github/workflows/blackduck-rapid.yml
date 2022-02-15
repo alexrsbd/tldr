@@ -27,8 +27,8 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           
-      - name: Create certificate
-        run: cat <<< "${{secrets.BASE_64_CERTIFICATE_CONTENT}}" > /home/alexrs/my-ca-cert.pem
+      #- name: Create certificate
+      #  run: cat <<< "${{secrets.BASE_64_CERTIFICATE_CONTENT}}" > /home/alexrs/my-ca-cert.pem
       
       - name: Pip Install
         run: pip3 install -r ./requirements.txt
@@ -42,7 +42,7 @@ jobs:
         # Enable diagnostic mode
         env:
           DETECT_DIAGNOSTIC: true
-          NODE_EXTRA_CA_CERTS: /home/alexrs/my-ca-cert.pem 
+          #NODE_EXTRA_CA_CERTS: /home/alexrs/my-ca-cert.pem 
           NODE_TLS_REJECT_UNAUTHORIZED: 0
         #  DETECT_DIAGNOSTIC_EXTENDED: true
         with:
