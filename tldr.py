@@ -283,7 +283,7 @@ def searchScanId(scanid):
     else:
         result = sorted([y for x in os.walk(logDir) for y in glob(os.path.join(x[0], '*.log*'))])
     dates = []
-    includePattern = "hub-scan|blackduck-bomengine|rabbitmq|jobrunner"
+    includePattern = "hub-scan|blackduck-bomengine|blackduck-matchengine|rabbitmq|jobrunner"
     include = re.compile(includePattern)
     excludePattern = "access-log|scansummary|debug"
     exclude = re.compile(excludePattern)
