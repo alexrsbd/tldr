@@ -1,0 +1,16 @@
+name: Create Policy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Black Duck Policy
+        #env:
+          #NODE_EXTRA_CA_CERTS: ${{ secrets.LOCAL_CA_CERT_PATH }}
+        uses: blackducksoftware/create-policy-action@main
+        with:
+          blackduck-url: ${{ secrets.BLACKDUCK_URL }}
+          blackduck-api-token: ${{ secrets.BLACKDUCK_API_KEY }}
