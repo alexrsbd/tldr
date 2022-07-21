@@ -1,10 +1,10 @@
 name: "Synopsys Intelligent Security Scan"
 
 on:
-  push:
-    branches: [master]
   pull_request:
-    branches: [master]
+    branches:
+      - master
+  push:
 
 jobs:
   security:
