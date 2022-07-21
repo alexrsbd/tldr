@@ -9,7 +9,7 @@ on:
 jobs:
   security:
     name: security scans
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout repository
